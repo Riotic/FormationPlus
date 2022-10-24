@@ -1,0 +1,125 @@
+/* -------------------------- Flex direction -------------- */
+.flexVertical
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.flex
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/* ------------------------ Space between Element --------------- */
+.spaceE{justify-content: space-evenly;}
+
+.spaceA{justify-content: space-around;}
+
+.spaceB{justify-content: space-between;}
+
+/* -------------------------- Flex size go up to 8 ------------------ */
+
+.flx1{flex:1;}
+
+.flx2{flex:2;}
+
+.flx3{flex:3;}
+
+.flx4{flex:4;}
+
+.flx5{flex:5;}
+
+.flx6{flex:6;}
+
+.flx7{flex:7;}
+
+.flx8{flex:8;}
+
+
+/* -------------------------- Flex shrink size go up to 6 ------------------ */
+
+.flx-shrink1{flex-shrink:1;}
+
+.flx-shrink2{flex-shrink:2;}
+
+.flx-shrink3{flex-shrink:3;}
+
+.flx-shrink4{flex-shrink:4;}
+
+.flx-shrink5{flex-shrink:5;}
+
+.flx-shrink6{flex-shrink:6;}
+
+
+/* -------------------------- Flex grow size go up to 8 ------------------ */
+
+.flx-grow1{flex-shrink:1;}
+
+.flx-grow2{flex-shrink:2;}
+
+.flx-grow3{flex-shrink:3;}
+
+.flx-grow4{flex-shrink:4;}
+
+.flx-grow5{flex-shrink:5;}
+
+.flx-grow6{flex-shrink:6;}
+
+.flx-grow7{flex-shrink:7;}
+
+.flx-grow8{flex-shrink:8;}
+
+/* ------------------------------ Gap in each space ---------------------- */
+
+.rowGap{row-gap: 30px;}
+
+.colGap{column-gap: 10px;}
+
+.gap1{gap: 20px;}
+
+/* -------------------------------------- Justify content ----------------------- */
+
+.jc-cent{justify-content: center;}
+
+.jc-start{justify-content: start;}
+
+.jc-end{justify-content: end;}
+
+
+/* ------------------------------------------- Align-items center ------------------------ */
+
+.ali-center{align-items:center}
+
+.ali-start{align-items:flex-start}
+
+.ali-end{align-items:flex-end}
+
+.ali-stretch{align-items:stretch}
+
+/* ------------------------------------------- Align-self center ------------------------ */
+
+.als-center{align-self:center}
+
+.als-start{align-self:flex-start}
+
+.als-end{align-self:flex-end}
+
+.als-stretch{align-self:stretch}
+
+.als-auto{align-self:auto}
+
+/* ------------------------------------------- width and height ------------------------ */
+
+.fullWidth{width: 100%;}
+
+.fullHeight{height:100%;}
+
+

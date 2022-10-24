@@ -1,0 +1,35 @@
+/* -------------------------------  CSS Base ------------------------- */
+html,body{height: 100%;}
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Spinnaker', sans-serif;
+}
+
+
+/* --- Header --- */
+
+.header{background-color: rgb(53, 14, 227); /* height: 100px; */}
+
+.headerGuest{background-color: rgb(235, 255, 14);}
+
+.main{background-color: green;}
+
+.footer{ background-color: red;}
+
+.noLiStyle li{list-style: none;}
+
+.noLiStyle a{color: black;text-decoration: none;}
+
+/* Test */
+.ulTest{text-align: center;}
+
+.ulTest li
+{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+

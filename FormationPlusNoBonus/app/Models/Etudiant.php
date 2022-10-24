@@ -5,21 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Convention extends Model
+class Etudiant extends Model
 {
     use HasFactory;
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'nom','nbHeur', 'id_etudiant',
+        'nom','prenom', 'email', 'id_convention',
     ];
-    // relation many to one
-    public function convention()
+
+    // relation one to Many
+    public function etudiant()
     {
-        return $this->hasMany('App\Models\Etudiant');
+        return $this->belongsTo('App\Models\Convention','id_convention','id');
     }
 }

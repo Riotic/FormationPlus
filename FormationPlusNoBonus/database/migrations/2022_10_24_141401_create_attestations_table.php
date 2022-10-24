@@ -15,8 +15,13 @@ class CreateAttestationsTable extends Migration
     {
         Schema::create('attestations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('idEtudiant');
-            $table->foreignId('idConvention');
+            // suppression en cascade si l'étudiant ou la convention n'existe plus
+            $table->foreignId('id_etudiant')
+            ->references('id')->on('etudiants')
+            ->onDelete('cascade');
+            $table->foreignId('id_convention')
+            ->references('id')->on('conventions')
+            ->onDelete('cascade');
             $table->text('message');
             $table->timestamps();
         });
