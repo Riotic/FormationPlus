@@ -12,9 +12,10 @@ class AttestationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Attestation $attestations)
     {
-        //
+        $attestations = Attestation::orderBy('created_at', 'desc')->paginate(8);
+	    return view('attesations.index', compact('attestations'));
     }
 
     /**
