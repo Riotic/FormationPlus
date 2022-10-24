@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AttestationController;
+use App\Models\Attestation;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,5 @@ Route::get('/', function () {
 Route::get('/test', function() {
     return view('layouts.default');
 });
+
+Route::resource('attestations', AttestationController::class);

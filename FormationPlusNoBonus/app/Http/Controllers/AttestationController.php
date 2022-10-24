@@ -15,7 +15,7 @@ class AttestationController extends Controller
     public function index(Attestation $attestations)
     {
         $attestations = Attestation::orderBy('created_at', 'desc')->paginate(8);
-	    return view('attesations.index', compact('attestations'));
+	    return view('attestations.index', compact('attestations'));
     }
 
     /**
@@ -25,7 +25,7 @@ class AttestationController extends Controller
      */
     public function create()
     {
-        //
+        return view('attestations.create');
     }
 
     /**
@@ -36,7 +36,12 @@ class AttestationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'message' => 'required',
+        ]);
+        $attestation = Attestation::create($validated);
+        $attestations = Attestation::orderBy('created_at', 'desc')->paginate(8);
+        return view('attestations.index', compact('attestations'));
     }
 
     /**

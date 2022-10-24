@@ -9,5 +9,6 @@
             </div>
         @endforeach
     </div>
+    {{ $attestations->links() }}
 
 @endsection
