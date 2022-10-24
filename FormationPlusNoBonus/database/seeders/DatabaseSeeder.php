@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Convention;
+use App\Models\Etudiant;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +15,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // User::factory(10)->create();
+
+        // création de plusieurs conventions pour plusieurs etudiants
+        Convention::factory(5)
+        ->create()
+        ->each(function ($convention) {
+            Etudiant::factory(5)
+            ->create(['id_convention' => $convention->id]);
+        });
     }
 }

@@ -15,7 +15,7 @@ class CreateConventionsTable extends Migration
     {
         Schema::create('conventions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_etudiant');
+            // $table->foreignId('id_etudiant');
             $table->string('nom');
             $table->integer('nbHeur');
             $table->timestamps();

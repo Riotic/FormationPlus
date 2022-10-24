@@ -18,7 +18,7 @@ class CreateEtudiantsTable extends Migration
             $table->string('nom');
             $table->string('prenom');
             $table->string('email')->unique();
-            $table->foreignId('id_convention');
+            $table->foreignId('id_convention')->constrained('conventions');
             $table->timestamps();
         });
     }

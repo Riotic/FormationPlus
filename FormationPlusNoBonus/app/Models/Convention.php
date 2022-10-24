@@ -15,7 +15,7 @@ class Convention extends Model
      * @var array
      */
     protected $fillable = [
-        'nom','nbHeur', 'id_etudiant',
+        'nom','nbHeur', /*'id_etudiant',*/
     ];
     // relation many to one
     public function convention()
