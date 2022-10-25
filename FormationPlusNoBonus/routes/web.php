@@ -25,4 +25,5 @@ Route::get('/test', function() {
 
 Route::resource('attestations', AttestationController::class);
 
+// route pour ajax
 Route::get('/search', [AttestationController::class, 'search']);

@@ -1,0 +1,22 @@
+CLEMENT Rio
+
+## Formation_plus
+
+POC qui a pour objectif d'insérer une attestation en base de données pour un élève concernant une convention.
+
+## Prérequis, installation, déploiement
+
+J'ai réalisé mon script en python et j'ai réalisé mon interface web via Laravel.
+
+Pour mon projet j'ai utiliser les logiciels suivants :  
+- un environnement windows 11
+- wampserver 3.2.9 x64
+- php 7.4.26  
+- composer 2.3.7
+- Laravel 8.83.25  
+
+1 Lancement d'un projet en laravel 8.83
+2 Création des models / controllers et migrations pour les tables conventions, etudiants et attestations.
+3 Création d'une vue responsive de défauts pour la gestion des différentes vues des ressources.
+4 Créations d'un seeder permettant le peuplage des données pour les créations des attestations.
+5 Création de la vue pour la création d'une attestation
