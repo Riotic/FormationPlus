@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Etudiant;
+use App\Models\Convention;
 use App\Models\Attestation;
 use Illuminate\Http\Request;
+
 
 class AttestationController extends Controller
 {
@@ -28,6 +31,23 @@ class AttestationController extends Controller
         return view('attestations.create');
     }
 
+    // recherche du nom de la convention via ajax
+    public function search(Request $request)
+    {
+        $output = "";
+        $convention = Convention::where('id', 'Like','%'.$request->search.'%')->get();
+        
+        foreach($convention as $convention)
+        {   
+            // pour pouvoir parser la data et récuperer le nb d'heures "---" a été ajouté
+            $output.=$convention->nom.'---'.$convention->nbHeur;
+        }
+        return response($output);
+    }
+
+
+
+
     /**
      * Store a newly created resource in storage.
      *
@@ -38,12 +58,15 @@ class AttestationController extends Controller
     {
         $validated = $request->validate([
             'message' => 'required',
+            'id_etudiant' => 'required',
+            'id_convention' => 'required',
         ]);
         $attestation = Attestation::create($validated);
         $attestations = Attestation::orderBy('created_at', 'desc')->paginate(8);
         return view('attestations.index', compact('attestations'));
     }
 
+    
     /**
      * Display the specified resource.
      *
@@ -52,7 +75,7 @@ class AttestationController extends Controller
      */
     public function show(Attestation $attestation)
     {
-        //
+        return view('attestations.show', ['attestation' => $attestation]);
     }
 
     /**

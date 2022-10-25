@@ -24,3 +24,5 @@ Route::get('/test', function() {
 });
 
 Route::resource('attestations', AttestationController::class);
+
+Route::get('/search', [AttestationController::class, 'search']);
