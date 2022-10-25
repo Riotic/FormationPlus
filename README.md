@@ -51,4 +51,4 @@ Faites php artisan serve et vous pourrez selectionner un étudiant, et des gén�
 
 Comme vous pouvez le voir les données se sont bel et bien stocké dans la base de donnée.
 
-Pour toutes questions contacter via googlec chat par mon adresse mail clemen_r@etna-alternance.net .
+Pour toutes questions vous pouvez me contacter via google chat par mon adresse mail clemen_r@etna-alternance.net.
