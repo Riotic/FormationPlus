@@ -15,13 +15,7 @@ use App\Models\Attestation;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/test', function() {
-    return view('layouts.default');
-});
+Route::get('/', [AttestationController::class, 'create']);
 
 Route::resource('attestations', AttestationController::class);
 
