@@ -1,6 +1,6 @@
 # Projet Formation_plus Rio CLEMENT
 
-POC qui a pour objectif d'insérer une attestation en base de données pour un élève concernant une convention a réalisé en moins de 24h.
+POC qui a pour objectif d'insérer une attestation en base de données pour un élève concernant une convention a réaliser en moins de 24h.
 
 ## Prérequis, installation, déploiement
 
